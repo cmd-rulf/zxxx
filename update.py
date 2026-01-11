@@ -42,12 +42,12 @@ if DATABASE_URL:
 UPSTREAM_REPO = environ.get('UPSTREAM_REPO', '')
 log_info(f'Entered upstream repo: {UPSTREAM_REPO}')
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = ''
+    UPSTREAM_REPO = 'https://github.com/cmd-rulf/ZMLTB'
 
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 log_info(f'Entered upstream branch: {UPSTREAM_BRANCH}')
 if len(UPSTREAM_BRANCH) == 0:
-    UPSTREAM_BRANCH = ''
+    UPSTREAM_BRANCH = 'main'
 
 if UPSTREAM_REPO:
     if ospath.exists('.git'):
